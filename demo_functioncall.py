@@ -3,7 +3,7 @@ from torch.autograd import Variable
 import utils
 import dataset
 from PIL import Image
-import kenlm
+#import kenlm
 from math import log
 from numpy import array
 from numpy import argmax
@@ -43,7 +43,7 @@ converter = utils.strLabelConverter(params.alphabet)
 
 transformer = dataset.resizeNormalize((params.imgW, params.imgH))
 
-lm_model = kenlm.LanguageModel('telugu.binary')
+#lm_model = kenlm.LanguageModel('telugu.binary')
 
 
 
@@ -96,8 +96,8 @@ def predict_word(img):
     ctc_in_matrix = preds.transpose(1, 0)
     ctc_in_matrix = ctc_in_matrix.squeeze(0)
     ctc_matrix_numpy = ctc_in_matrix.detach().cpu().numpy()
-    seq = beam_search_decoder_with_lm(ctc_matrix_numpy,5)
-    result_beam = ctcBestPath_decode(seq[0][0],new_classes)
+    #seq = beam_search_decoder_with_lm(ctc_matrix_numpy,5)
+    #result_beam = ctcBestPath_decode(seq[0][0],new_classes)
     
 
     _, preds = preds.max(2)
