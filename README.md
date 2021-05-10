@@ -1,2 +1,3 @@
-# Deployment-Deep-Learning-Model# telugu_ocr_multi_line
+# Deployment-Deep-Learning-Model
+# Telugu OCR
  (Demo)[https://youtu.be/6l8qQh2w3GU]
